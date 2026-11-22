@@ -9,6 +9,18 @@
 
 > Designed &amp; built by Yacine Naoui · Originally based on [Brittany Chiang's v4](https://brittanychiang.com) ([bchiang7/v4](https://github.com/bchiang7/v4), MIT). The content, theme and layout here are my own; see [LICENSE](LICENSE) for the original notice.
 
+![Home page: terminal-style hero that types `whoami`](docs/screenshots/hero.png)
+
+## Screenshots
+
+| Projects: case-study card with problem, stack, architecture and results |    About: bio, grouped skills, education     |
+| :---------------------------------------------------------------------: | :------------------------------------------: |
+|           ![Projects section](docs/screenshots/projects.png)            | ![About section](docs/screenshots/about.png) |
+
+<p align="center">
+  <img alt="Mobile: hero and the slide-in menu" src="docs/screenshots/mobile.png" width="520" />
+</p>
+
 ## Stack
 
 - Gatsby 3 (static site, image pipeline, markdown content), React 17, styled-components
