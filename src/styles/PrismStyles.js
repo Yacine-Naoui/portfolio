@@ -1,8 +1,8 @@
 import { css } from 'styled-components';
 
 const prismColors = {
-  bg: `#121316`,
-  lineHighlight: `#1a1b1f`,
+  bg: `#1b2039`,
+  lineHighlight: `#222848`,
   blue: `#5ccfe6`,
   purple: `#c3a6ff`,
   green: `#bae67e`,

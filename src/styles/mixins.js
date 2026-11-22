@@ -10,7 +10,7 @@ const buttonBase = css`
   border-radius: var(--radius-sm);
   font-family: var(--font-mono);
   font-size: var(--fz-sm);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;

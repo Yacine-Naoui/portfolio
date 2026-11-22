@@ -48,19 +48,19 @@ Commits run prettier and eslint on staged files through husky + lint-staged.
 
 ## Where things live
 
-| What                                                    | Where                                                                                             |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Email, socials, nav, resume URL, education, "Currently" | `src/config.js`                                                                                   |
-| Site title / description / URL / Twitter handle         | `gatsby-config.js` → `siteMetadata`                                                               |
-| Experience entries                                      | `content/jobs/<Company>/index.md` (one folder per role)                                           |
-| Featured case studies                                   | `content/featured/<Project>/index.md`                                                             |
-| Other projects grid                                     | `content/projects/*.md` (copy `_template.md`, set `showInProjects: true`)                         |
-| Hero / About copy                                       | `src/components/sections/hero.js`, `about.js`                                                     |
-| Colours, fonts, spacing                                 | `src/styles/variables.js` (single `--accent`; swap the four `--accent*` values for electric blue) |
-| Photo                                                   | `src/images/me.jpg`                                                                               |
-| Resume                                                  | `static/resume.pdf` (linked from the header while `resumeUrl` is set)                             |
-| Favicon / app icon source                               | `src/images/logo.png`                                                                             |
-| Social preview image                                    | `static/og.png`, `static/og@2x.png`                                                               |
+| What                                                    | Where                                                                                                                                |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Email, socials, nav, resume URL, education, "Currently" | `src/config.js`                                                                                                                      |
+| Site title / description / URL / Twitter handle         | `gatsby-config.js` → `siteMetadata`                                                                                                  |
+| Experience entries                                      | `content/jobs/<Company>/index.md` (one folder per role)                                                                              |
+| Featured case studies                                   | `content/featured/<Project>/index.md`                                                                                                |
+| Other projects grid                                     | `content/projects/*.md` (copy `_template.md`, set `showInProjects: true`)                                                            |
+| Hero / About copy                                       | `src/components/sections/hero.js`, `about.js`                                                                                        |
+| Colours, fonts, spacing                                 | `src/styles/variables.js` (navy surfaces, indigo/purple glows and one periwinkle `--accent`, all measured from the reference design) |
+| Photo                                                   | `src/images/me.jpg`                                                                                                                  |
+| Resume                                                  | `static/resume.pdf` (linked from the header while `resumeUrl` is set)                                                                |
+| Favicon / app icon source                               | `src/images/logo.png`                                                                                                                |
+| Social preview image                                    | `static/og.png`, `static/og@2x.png`                                                                                                  |
 
 Case-study frontmatter (`content/featured/*/index.md`):
 

@@ -1,33 +1,39 @@
 import { css } from 'styled-components';
 
 /*
-  Design tokens. The whole site is coloured from here:
-  - surfaces are near-black / charcoal
-  - there is exactly ONE accent colour. To switch from amber to electric blue,
-    change the four --accent* values below (e.g. #3b82f6 / #60a5fa / rgba(59,130,246,…)).
+  Design tokens. The whole site is coloured from here. Every value below was
+  measured from the reference design (deep navy base, an indigo/blue glow at
+  the top-left, a purple glow at the bottom-right, and ONE periwinkle accent
+  used for filled buttons and highlighted words).
   Keep src/config.js `colors` in sync (used for the web-app manifest).
 */
 const variables = css`
   :root {
-    /* Surfaces */
-    --bg: #0b0b0d;
-    --bg-elevated: #121316;
-    --bg-raised: #1a1b1f;
-    --border: #26282e;
-    --border-strong: #34373f;
-    --shadow: rgba(0, 0, 0, 0.6);
+    /* Surfaces (base navy from the reference; cards a step lighter) */
+    --bg: #161b30;
+    --bg-elevated: #1b2039;
+    --bg-raised: #222848;
+    --border: #2b2e57;
+    --border-strong: #3a4273;
+    --shadow: rgba(8, 10, 24, 0.6);
+
+    /* Ambient glows painted behind the page (see GlobalStyle body::before) */
+    --glow-indigo: #303e79;
+    --glow-blue: #243f62;
+    --glow-purple: #3e2a68;
+    --glow-corner: #2b2e57;
 
     /* Text */
-    --text: #e8e8ea;
-    --text-muted: #9a9ca3;
-    --text-dim: #7c7f88;
+    --text: #ffffff;
+    --text-muted: #9b9ea9;
+    --text-dim: #727685;
 
-    /* Accent (amber) */
-    --accent: #f5a524;
-    --accent-hover: #ffb84d;
-    --accent-contrast: #0b0b0d;
-    --accent-tint: rgba(245, 165, 36, 0.12);
-    --accent-glow: rgba(245, 165, 36, 0.3);
+    /* Accent (periwinkle: button fill #6c8cbf, highlighted word #7899ce) */
+    --accent: #6c8cbf;
+    --accent-hover: #7899ce;
+    --accent-contrast: #ffffff;
+    --accent-tint: rgba(108, 140, 191, 0.14);
+    --accent-glow: rgba(108, 140, 191, 0.4);
 
     /* Type */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui,

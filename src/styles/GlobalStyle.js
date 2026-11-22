@@ -72,8 +72,6 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: var(--bg);
-    background-image: radial-gradient(ellipse 70% 40% at 50% -10%, var(--accent-tint), transparent);
-    background-repeat: no-repeat;
     color: var(--text-muted);
     font-family: var(--font-sans);
     font-size: var(--fz-md);
@@ -97,6 +95,19 @@ const GlobalStyle = createGlobalStyle`
         user-select: none;
       }
     }
+  }
+
+  /* Ambient glows from the reference design: indigo + blue top-left, purple bottom-right */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: radial-gradient(ellipse 40% 42% at 5% 6%, var(--glow-indigo) 0%, transparent 70%),
+      radial-gradient(ellipse 30% 36% at 3% 36%, var(--glow-blue) 0%, transparent 70%),
+      radial-gradient(ellipse 36% 46% at 94% 76%, var(--glow-purple) 0%, transparent 70%),
+      radial-gradient(ellipse 26% 30% at 100% 100%, var(--glow-corner) 0%, transparent 70%);
   }
 
   #root {

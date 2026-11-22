@@ -71,9 +71,9 @@ module.exports = {
 
   // Keep in sync with src/styles/variables.js (used by the web-app manifest)
   colors: {
-    accent: '#f5a524',
-    background: '#0b0b0d',
-    surface: '#121316',
+    accent: '#6c8cbf',
+    background: '#161b30',
+    surface: '#1b2039',
   },
 
   srConfig: (delay = 200, viewFactor = 0.25) => ({
