@@ -80,18 +80,6 @@ results:
   - 'Measured outcome'
 ```
 
-## TODO before going live
-
-- [ ] Optional: `twitterUsername` in `gatsby-config.js`; `siteUrl` is taken from Vercel automatically (override with a `SITE_URL` env var)
-- [ ] `static/resume.pdf` is built from `resume/cv.tex` (`cd resume && make`); rebuild it after editing the source
-- [ ] Push to GitHub to run the CI workflow for the first time, then import the repo in Vercel (see below)
-
-## Deploying to Vercel
-
-1. Push the repository to GitHub.
-2. In Vercel, **Add New → Project**, import `Yacine-Naoui/portfolio` and deploy. The install, build and output settings come from `vercel.json`; the Node version (22) comes from `engines` in `package.json`.
-3. Every push to `main` becomes the production deployment; pull requests get preview URLs.
-4. The sitemap, `robots.txt` and Open Graph URLs use the project's production domain (`VERCEL_PROJECT_PRODUCTION_URL`). After adding a custom domain under **Settings → Domains**, redeploy once; to force a specific URL, set a `SITE_URL` environment variable instead.
 
 ## License
 
