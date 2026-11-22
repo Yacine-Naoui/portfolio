@@ -1,0 +1,123 @@
+%==============================================================
+%  Yacine Naoui — generic CV served at /resume.pdf
+%  Build:  cd resume && make        (needs pdflatex + fontawesome5)
+%  Edit this file, rebuild, and commit the regenerated static/resume.pdf.
+%==============================================================
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{textcomp}
+\usepackage{lmodern}
+
+\hypersetup{colorlinks=true, linkcolor=blue!60!black, urlcolor=blue!60!black, pdftitle={Yacine Naoui - CV}, pdfauthor={Yacine Naoui}}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}[{\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{nosep, leftmargin=1.1em, itemsep=1pt, topsep=1pt}
+\pagestyle{empty}
+
+\newcommand{\role}[4]{\textbf{#1}, #2 \hfill #3\\ \textit{#4}}
+\newcommand{\proj}[3]{\textbf{#1} \textit{\small(#2)} \hfill {\small #3}}
+
+\begin{document}
+
+%-------------------- Header
+\begin{center}
+  {\LARGE\bfseries Yacine Naoui}\\[3pt]
+  {\large Backend \& ML Engineer}\\[2pt]
+  {\small LLM agent platforms \textperiodcentered\ fraud and intrusion detection \textperiodcentered\ secure, automated infrastructure}\\[5pt]
+  \small
+  \faPhone~+213 540349926 \quad
+  \faEnvelope~\href{mailto:yacine.naoui2024@gmail.com}{yacine.naoui2024@gmail.com} \quad
+  \faGithub~\href{https://github.com/Yacine-Naoui}{github.com/Yacine-Naoui}\\[2pt]
+  \faLinkedin~\href{https://www.linkedin.com/in/yacine-naoui-a8751b230/}{linkedin.com/in/yacine-naoui-a8751b230} \quad
+  Algiers, Algeria \textperiodcentered\ English \& French (professional), Arabic (native)
+\end{center}
+
+%-------------------- Profile
+\section*{Profile}
+Backend and ML engineer with a security background. Since August 2025 I have led backend and ML engineering at SARL CloudWind across four production platforms in security, insurance and industry, taking LLM agents, RAG backends and ML scoring pipelines from proof of concept to production with eval-gated releases and per-request cost tracking. My MSc thesis, CAVIX, carried out with King Saud University, combined deep learning and reinforcement learning to detect multi-stage APT attacks early and respond to them automatically.
+
+%-------------------- Education
+\section*{Education}
+\textbf{ESI, École Nationale Supérieure d'Informatique}, Algiers \hfill Sep 2023 -- Jun 2026\\
+BEng (Ingénieur d'État) \& MSc in Computer Science, Computer Systems\\[2pt]
+\textbf{ESTIN Béjaïa} \hfill Oct 2021 -- May 2023\\
+Preparatory Classes in Computer Science
+
+%-------------------- Experience
+\section*{Experience}
+
+\role{Backend Lead \& ML Engineer}{SARL CloudWind}{Aug 2025 -- Present}{Leads backend and ML engineering across four production platforms (security, insurance, industry). \hfill Algiers, Algeria}
+\begin{itemize}
+  \item \textbf{Multi-agent platform for security operations:} five specialised LLM agents (hunt, investigation, rule authoring, reporting, chat) behind a provider-agnostic model router with automatic failover across GPT, Claude and on-prem LLMs.
+  \item \textbf{Production RAG} over security telemetry with cross-encoder reranking, prompt-injection guardrails, response caching and per-tenant cost and token budgets; ships unchanged to cloud and air-gapped customers.
+  \item \textbf{LLM evaluation:} designed the reproducible benchmark (Claude Opus vs.\ Qwen3 / Llama~4, with and without RAG) that drove a client's migration to on-prem models.
+  \item \textbf{Insurance fraud detection:} hybrid rule + ML pipeline for a national insurer, piloted on 59{,}055 claims at ${\sim}$12~ms per claim; a rule engine over 180 fraud indicators plus an unsupervised VAE that caught 100\% of injected inflation cases.
+  \item \textbf{Insurance self-service agent:} multilingual (FR/EN/AR) LangGraph agent that calls backend services as tools, with memory, vision-based damage assessment and fraud scoring, on a multi-tenant NestJS platform.
+  \item \textbf{Industrial energy audit agent:} on-prem LLM agent (vLLM) replacing a manual audit, with human-in-the-loop review, deterministic validators and releases blocked unless they pass regression evals.
+  \item \textbf{Production reliability:} regression eval sets, drift monitoring and per-request token and cost tracking across all platforms; Dockerised deployments on AWS with CI/CD (GitHub Actions, Jenkins).
+\end{itemize}
+
+\vspace{3pt}
+\role{Research Intern, Cyber Kill Chain \& GenAI}{King Saud University}{Sep 2025 -- Jun 2026}{MSc thesis research (CAVIX, below), supervised by Prof.\ Abdelouahid Derhab (CoEIA, King Saud University) and Prof.\ Yacine Ait Ali Yahia (ESI). \hfill Remote, with ESI Algiers}
+
+\vspace{3pt}
+\role{Malware Analysis Intern}{CERIST}{Jul 2024 -- Sep 2024}{Android malware analysis on a large-scale threat corpus. \hfill Algiers, Algeria}
+\begin{itemize}
+  \item Automated batch APK scans through the MobSF API and dynamic tests with DroidBot-GPT on Genymotion; orchestrated the tools in Docker for a one-command, repeatable workflow.
+  \item Managed 20{,}000+ botnet samples by family and variant; clustered C2 IPs and domains to detect botnet communities and infer their origins.
+\end{itemize}
+
+%-------------------- Research
+\section*{Research}
+\textbf{CAVIX: Early Detection and Automated Response for Multi-Stage APT Attacks} \hfill Defended Jun 2026\\
+\textit{MSc thesis, pair project, graded Very Good (16.02/20). I contributed across all components.}
+\begin{itemize}
+  \item \textbf{Detection stack:} SecBERT embeddings of command lines, process names, file paths and URLs from Wazuh SIEM alerts, feeding an autoencoder (anomaly), a $\beta$-VAE (maliciousness), a Transformer (next Kill Chain stage) and GraphSAGE (lateral movement).
+  \item \textbf{RL response agent:} designed STRIX, a Deep Q-Network that fuses the four detectors' outputs and chooses a response (monitor, alert, escalate, isolate host, block); a deterministic safety gate constrains which actions reach the network.
+  \item Offset scarce labelled data with synthetic attack sequences generated by REaLTabFormer.
+  \item \textbf{Results:} Linux APT Dataset 2024 (APT41, APT28, APT29, Turla; 14 weeks; 115{,}726 alerts), 2{,}000 held-out episodes: F1 0.84, 16\% false-positive rate, 81\% of campaigns stopped before Installation. Ablations: without the Transformer, pre-detection fell to 48\%; removing any single detector raised false positives to 44--52\%.
+  \item \textbf{Platform and cyber range:} FastAPI backend with ARQ workers, Next.js analyst console and a React Native companion app; reproducible Docker lab driven by MITRE Caldera as the adversary, from kernel syscall to response decision in under 5~s.
+  \item \textbf{Open problem:} the language model reads attacker-written strings that drive response actions, and the safety gate was never tested against an adaptive attacker.
+  \item \textbf{Code:} \faGithub~\href{https://github.com/APT-Framwork/GenAI-Detection-Framework}{github.com/APT-Framwork/GenAI-Detection-Framework}
+\end{itemize}
+
+%-------------------- Projects
+\section*{Projects}
+\begin{itemize}
+  \item \proj{Secure CI/CD pipeline for a client web application}{freelance}{} \\ CI/CD pipeline with automated security scanning and fixes for a client's PHP/MariaDB application.
+  \item \proj{5G core network simulation with Free5GC-Compose}{ESI, team of 6}{Feb -- May 2025} \\ Designed complex 5G core topologies with an extended number of UPFs, automated the Docker deployment with Python and Bash scripts, built a React + Flask GUI for real-time simulation and analysed signalling with Wireshark.
+  \item \proj{Smart irrigation decision support for southern Algeria}{ESI, team of 5}{Jan -- Feb 2025} \\ Data preparation for a deep-RL irrigation agent optimising saline-water ratios; Random Forest crop recommender trained on soil-salinity and climate data (83\% accuracy).
+  \item \proj{Compiler for a custom language}{ESI, pair}{Jan 2025} \\ Lexical and syntactic analysis with JavaCC, AST generation and semantic checks for a teacher-specified language.
+  \item \proj{Scientific research paper search engine}{ESI, team of 5}{Dec 2023 -- Feb 2024} \\ Django/PostgreSQL backend with authentication and authorisation, Elasticsearch full-text PDF indexing and SpaCy metadata extraction.
+  \item \proj{Bejaia Lingua language-school website}{ESTIN, team of 5}{Feb -- Apr 2023} \\ Requirements and design, then the Node.js/Express/MongoDB backend managing courses and students.
+\end{itemize}
+
+%-------------------- Certifications
+\section*{Certifications \& Training}
+\begin{itemize}
+  \item Supervised Machine Learning: Regression and Classification, DeepLearning.AI / Stanford (Coursera) \hfill Jul 2025
+  \item Implementing and Administering Cisco Solutions (CCNA), ICT Towers \hfill Jan 2024
+  \item Cyber Security Operations, ICT Towers \hfill Sep 2022
+  \item TryHackMe: Introduction to Cyber Security and Pre-Security certificates (Oct 2024); top 9\% global ranking, \href{https://tryhackme.com/p/yacine.naoui}{tryhackme.com/p/yacine.naoui}. PicoCTF binary-analysis and reverse-engineering challenges.
+\end{itemize}
+
+%-------------------- Skills
+\section*{Technical Skills}
+\begin{itemize}
+  \item \textbf{Languages:} Python, TypeScript, JavaScript, Java, SQL, Bash, C, x86 assembly
+  \item \textbf{ML \& RL:} PyTorch, PyTorch Geometric, Hugging Face Transformers, scikit-learn, XGBoost, TensorFlow, SpaCy; Deep Q-Networks, GraphSAGE, VAEs and autoencoders, BERT fine-tuning, anomaly detection on unlabelled data, sequence forecasting
+  \item \textbf{LLMs \& agents:} OpenAI GPT, Claude, Qwen3, Llama (vLLM, Ollama); LangChain, LangGraph, OpenAI SDK, MCP; multi-agent orchestration, tool calling, structured output, model routing; RAG with sentence-transformers, pgvector, Elasticsearch and cross-encoder reranking; LLM evals and benchmarks, prompt-injection guardrails
+  \item \textbf{Backend:} FastAPI, NestJS, Node.js/Express, Django; PostgreSQL, TimescaleDB, MongoDB, Oracle, Redis, Elasticsearch, pgvector, MinIO
+  \item \textbf{DevOps:} Linux, Docker and Compose, AWS, Terraform, Ansible, Git, CI/CD (GitHub Actions, Jenkins), Grafana + Prometheus monitoring
+\end{itemize}
+
+\end{document}
