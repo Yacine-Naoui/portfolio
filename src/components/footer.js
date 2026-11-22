@@ -33,9 +33,9 @@ const StyledFooter = styled.footer`
     font-size: var(--fz-sm);
 
     svg {
-      width: 22px;
-      height: 22px;
-      color: var(--accent);
+      width: 28px;
+      height: 28px;
+      color: var(--text);
     }
   }
 

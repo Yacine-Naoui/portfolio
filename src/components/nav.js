@@ -80,9 +80,19 @@ const StyledNav = styled.nav`
     }
 
     svg {
-      width: 30px;
-      height: 30px;
-      color: var(--accent);
+      width: 36px;
+      height: 36px;
+      color: var(--text);
+      transition: var(--transition);
+
+      .tile {
+        transition: var(--transition);
+      }
+    }
+
+    a:hover svg .tile,
+    a:focus-visible svg .tile {
+      stroke: var(--accent);
     }
 
     .wordmark {
