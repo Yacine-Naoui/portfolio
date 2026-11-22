@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 
     @media (prefers-reduced-motion: reduce) {
       scroll-behavior: auto;

@@ -68,6 +68,7 @@ const StyledNav = styled.nav`
 
     a {
       display: inline-flex;
+      flex-shrink: 0;
       align-items: center;
       gap: 10px;
       color: var(--text);
@@ -100,7 +101,8 @@ const StyledLinks = styled.div`
   align-items: center;
   gap: 16px;
 
-  @media (max-width: 768px) {
+  /* Below this the mobile menu takes over (tablets in portrait included) */
+  @media (max-width: 1023px) {
     display: none;
   }
 
@@ -140,6 +142,7 @@ const StyledLinks = styled.div`
 
     a {
       display: inline-flex;
+      flex-shrink: 0;
       padding: 8px;
       border-radius: var(--radius-sm);
       color: var(--text-muted);
@@ -153,6 +156,7 @@ const StyledLinks = styled.div`
       svg {
         width: 18px;
         height: 18px;
+        flex-shrink: 0;
       }
     }
   }

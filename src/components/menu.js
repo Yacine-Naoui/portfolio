@@ -10,7 +10,7 @@ import { Icon } from '@components/icons';
 const StyledMenu = styled.div`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     display: block;
   }
 `;
@@ -18,7 +18,7 @@ const StyledMenu = styled.div`
 const StyledHamburgerButton = styled.button`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     ${({ theme }) => theme.mixins.flexCenter};
     position: relative;
     z-index: 10;
@@ -89,7 +89,7 @@ const StyledHamburgerButton = styled.button`
 const StyledSidebar = styled.aside`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,7 +235,7 @@ const Menu = () => {
   };
 
   const onResize = e => {
-    if (e.currentTarget.innerWidth > 768) {
+    if (e.currentTarget.innerWidth > 1023) {
       setMenuOpen(false);
     }
   };

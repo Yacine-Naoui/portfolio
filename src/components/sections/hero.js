@@ -23,6 +23,12 @@ const StyledHeroSection = styled.section`
     padding-top: calc(var(--nav-height) + 40px);
   }
 
+  /* Phones and tablets held upright: no need to stretch to the full height */
+  @media (orientation: portrait) {
+    min-height: auto;
+    padding: calc(var(--nav-height) + 56px) 0 48px;
+  }
+
   .meta {
     margin: 24px 0 0 4px;
     color: var(--text-dim);
@@ -77,6 +83,16 @@ const StyledTerminal = styled.div`
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    @media (max-width: 480px) {
+      .spacer {
+        display: none;
+      }
+      .title {
+        padding-left: 12px;
+        text-align: right;
+      }
     }
   }
 
