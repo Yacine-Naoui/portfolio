@@ -78,11 +78,6 @@ const StyledFooter = styled.footer`
     font-family: var(--font-mono);
     font-size: var(--fz-xxs);
     line-height: 1.6;
-
-    a {
-      ${({ theme }) => theme.mixins.inlineLink};
-      color: var(--text-muted);
-    }
   }
 `;
 
@@ -112,12 +107,7 @@ const Footer = () => (
         </li>
       </ul>
 
-      <div className="credit">
-        Designed &amp; built by Yacine Naoui &middot; Originally based on{' '}
-        <a href="https://brittanychiang.com" target="_blank" rel="noreferrer">
-          Brittany Chiang&apos;s v4
-        </a>
-      </div>
+      <div className="credit">Designed &amp; built by Yacine Naoui</div>
     </div>
   </StyledFooter>
 );
